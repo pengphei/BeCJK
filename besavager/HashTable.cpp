@@ -20,6 +20,7 @@
 // Hash Table yanked from GLIB
 
 
+#include <strings.h>
 #include "HashTable.h"
 #include "Strings.h"
 
@@ -120,7 +121,7 @@ SHashTable::~SHashTable()
 uint32
 SHashTable::Hash(const void* key)
 {
-	return((uint32)key);
+	return((uintptr_t)key);
 }
 
 
